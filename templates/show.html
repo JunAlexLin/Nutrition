@@ -1,0 +1,22 @@
+{% extends "navbar.html" %}
+
+{% block content %}
+<div id="show_body">
+    <h2>Showing Results for "{{ search_term }}"</h2>
+    <ul id="search-results">
+        <div class="search-results">
+            {% for item in items %}
+            <li>
+                <a href="/view/{{ item.id }}">
+                    {{ item.name|safe }}
+                    ({{ item.calories }} Calories)
+                </a>
+            </li>
+            {% else %}
+            <p id="no_results">No results found for your query.</p>
+            {% endfor %}
+        </div>
+    </ul>
+    <p>{{ item_count }} result(s) found.</p>
+</div>
+{% endblock %}

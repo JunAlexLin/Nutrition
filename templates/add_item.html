@@ -1,0 +1,87 @@
+{% extends "navbar.html" %}
+
+{% block content %}
+
+
+<div id="add_item_body" class="container mt-4">
+
+    <div id="successMessage"></div>
+    
+    <h2>Add New Item</h2>
+    <form id="addItemForm" action="/add" method="post">
+        <div class="row">
+        <div class="col-md-6 mb-3">
+            <label for="itemName" class="form-label">Name</label>
+            <input type="text" class="form-control" id="itemName" name="name" required>
+            <div class="invalid-feedback">Please provide a name.</div>
+        </div>
+        
+        <div class="col-md-6 mb-3">
+            <label for="itemMediaLink" class="form-label">Media Link</label>
+            <input type="url" class="form-control" id="itemMediaLink" name="media_link" required>
+            <div class="invalid-feedback">Please provide a media link.</div>
+        </div>
+        
+        <div class="col-md-6 mb-3">
+            <label for="itemDescription" class="form-label">Description</label>
+            <textarea class="form-control" id="itemDescription" name="description" required></textarea>
+            <div class="invalid-feedback">Please provide a description.</div>
+        </div>
+        
+        <div class="col-md-6 mb-3">
+            <label for="itemCalories" class="form-label">Calories</label>
+            <input type="number" class="form-control" id="itemCalories" name="calories" required>
+            <div class="invalid-feedback">Please provide a valid calorie count.</div>
+        </div>
+        
+        <div class="col-md-6 mb-3">
+            <label for="itemListData" class="form-label">List Data (comma-separated)</label>
+            <input type="text" class="form-control" id="itemListData" name="list_data" required>
+            <div class="invalid-feedback">Please provide list data, separated by commas.</div>
+        </div>
+        
+        <div class="col-md-6 mb-3">
+            <label for="itemFat" class="form-label">Fat</label>
+            <input type="number" step="any" class="form-control" id="itemFat" name="fat" required>
+            <div class="invalid-feedback">Please provide a valid fat amount.</div>
+        </div>
+        </div>
+        
+
+        <div class="row">
+        <div class="col-md-6 mb-3">
+            <label for="itemCarbohydrates" class="form-label">Carbohydrates</label>
+            <input type="number" step="any" class="form-control" id="itemCarbohydrates" name="carbohydrates" required>
+            <div class="invalid-feedback">Please provide a valid carbohydrate amount.</div>
+        </div>
+        
+        <div class="col-md-6 mb-3">
+            <label for="itemProtein" class="form-label">Protein</label>
+            <input type="number" step="any" class="form-control" id="itemProtein" name="protein" required>
+            <div class="invalid-feedback">Please provide a valid protein amount.</div>
+        </div>
+        
+        <div class="col-md-6 mb-3">
+            <label for="itemFiber" class="form-label">Fiber</label>
+            <input type="number" step="any" class="form-control" id="itemFiber" name="fiber" required>
+            <div class="invalid-feedback">Please provide a valid fiber amount.</div>
+        </div>
+        
+        <div class="col-md-6 mb-3">
+            <label for="itemSugar" class="form-label">Sugar</label>
+            <input type="number" step="any" class="form-control" id="itemSugar" name="sugar" required>
+            <div class="invalid-feedback">Please provide a valid sugar amount.</div>
+        </div>
+        
+        <div class="col-md-6 mb-3">
+            <label for="itemSodium" class="form-label">Sodium</label>
+            <input type="number" step="any" class="form-control" id="itemSodium" name="sodium" required>
+            <div class="invalid-feedback">Please provide a valid sodium amount.</div>
+        </div>
+        </div>
+        
+        <button id = "add_item_submit" type="submit" class="btn btn-primary">Add Item</button>
+    </form>
+    
+</div>
+{% endblock %}

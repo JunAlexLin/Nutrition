@@ -1,0 +1,287 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    padding-top: 40px; /* Adjust based on navbar height */
+    font-family: Arial, sans-serif;
+    background-color: #323232; /* Slightly lighter than navbar */
+    
+}
+
+h1{
+    color: rgb(178, 176, 176);
+}
+
+h2{
+    font-size: 1.5em;
+    font-weight: normal;
+}
+
+span{
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+#name {
+    font-size: 30px;
+}
+
+#search_input{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.navbar {
+    background-color: #151515;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure navbar stays on top */
+    border-bottom: white 1px solid;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+.navbar form {
+    float: right;
+    padding: 10px;
+}
+
+.navbar input[type=text] {
+    padding: 6px;
+    margin-top: 8px;
+    font-size: 17px;
+    border: none;
+}
+
+.navbar button {
+    float: right;
+    padding: 6px 10px;
+    margin-top: 8px;
+    margin-right: 16px;
+    background: #ddd;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+}
+
+.navbar button:hover {
+    background: white;
+}
+
+#home_body {
+    display: flex;
+    flex-direction: column; /* Stacks flex items vertically */
+    margin-left: 50px; /* Adjust as necessary */
+    color: white;
+    padding-top: 40px; /* Additional padding to account for the navbar */
+}
+
+#item_body {
+    display: flex;
+    margin-left: 50px; /* Adjust as necessary */
+    color: white;
+    padding-top: 40px; /* Additional padding to account for the navbar */
+}
+
+.home_images {
+    display: block; /* Ensures the image is a block-level element */
+    margin: 0 auto; /* Centers the image in the block */
+    max-width: 100%; /* Ensures the image is not larger than its container */
+}
+#show_body{
+    display: flex;
+    flex-direction: column; 
+    margin-left: 50px;
+    color: rgba(255, 255, 255, 0.948);
+    padding-top: 50px;
+}
+
+mark {
+    background-color: #323232; /* or any color that stands out */
+    color: white !important; /* ensure readable text */
+    font-weight: bold;
+
+}
+
+#nutrition_img{
+    position: relative;
+    top: -69px;
+    left: -65px;
+    height: 50px;
+    width: 50px;
+}
+
+ul{
+    list-style-type: none;
+    margin-top: 0;
+}
+
+.nutrition_facts{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#food-list {
+    width: 100%;
+    text-align: left;
+}
+
+#food-list .food_list_item {
+    position: relative; /* New addition */
+    list-style-type: none; /* Remove default list item styling */
+    margin-bottom: 20px; /* Add some space between list items */
+}
+
+#food-list li{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 20px;
+}
+
+#search-results li {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 25px;
+    font-size: 20px;
+}
+
+.food_list_item .item-link {
+    position: absolute; /* Position the link absolutely */
+    top: 0; /* Align to the top of the parent */
+    left: 0; /* Align to the left of the parent */
+    width: 60%; /* Stretch across the entire parent */
+    height: 100%; /* Stretch across the entire parent */
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    text-decoration: none; /* Removes underline from links */
+    color: white; /* Set the text color */
+    font-size: 1em; /* Set the text size */
+    background-color: rgba(23, 23, 23, 0.5); /* Semi-transparent overlay */
+    z-index: 2; /* Ensure it's above the image */
+}
+
+
+/* Image styling */
+.food_list_item .home_images {
+    display: block;
+    width: 150px; /* Standardize the width of images */
+    height: auto; /* Keep the aspect ratio of images */
+    margin-top: 8px; /* Add some space between the text and the image */
+    position: relative;
+}
+
+.home_images:hover{
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+
+.search-results a {
+    color: gray; /* Set text color to white */
+    text-decoration: none; /* Remove underline */
+}
+
+/* CSS to format visited search result links */
+.search-results a:visited {
+    color: gray; /* Maintain white text color for visited links */
+}
+
+.search-results a:hover {
+    text-shadow: 0 0 10px rgb(0, 0, 0); 
+}
+
+#no_results{
+    font-weight: bold;
+    font-size: 1.25em;
+}
+
+#food_image {
+    max-width: auto;
+    max-height: 40vh;
+    border: 5px solid rgb(178, 176, 176);
+}
+
+.item-container {
+    display: flex;
+    justify-content: space-between; 
+    align-items: flex-start; 
+    padding: 20px; 
+}
+.item-description,
+#content_body {
+    padding: 20px; 
+}
+
+#content_body{
+    flex-basis: 30%;
+    background-color: rgb(37, 37, 37)
+}
+.item-description {
+    flex: 1; /* Allows this element to grow and fill the space */
+    flex-basis: 70%;
+}
+
+.item-image-container {
+    flex: 1; /* Allows this element to grow */
+    margin-right: 30px;
+}
+
+#food_image {
+    max-width: 70%; /* Adjust the image size */
+    height: auto;
+    border: 2px solid rgb(178, 176, 176); /* Keeps your border styling */
+}
+
+#add_item_body{
+    padding-top: 20px;
+    color: white;
+    background-color: rgb(37, 37, 37);
+}
+
+#edit_form{
+    position: absolute;
+    bottom: 40px;
+    left: 165px;
+}
+
+#editItemForm{
+    color: white;
+}
+
+#edit_header{
+    color: white;
+}
+
+#edit_item_body{
+    background-color: (37, 37, 37);
+}
+
+#discard_btn{
+    margin-left: 10px;
+}
+
+
+#add_item_submit{
+    position: relative;
+    left: 80vw;
+    bottom: 10vh;
+}
+
+
+#about{
+    max-width: 50vw;
+}
+
+#edit_container{
+    padding: 10px;
+    margin-top: 30px;
+    background: rgba(225, 220, 208, 0.323);
+}

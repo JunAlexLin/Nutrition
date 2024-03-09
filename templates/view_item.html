@@ -1,0 +1,48 @@
+{% extends "navbar.html" %}
+
+{% block content %}
+<head>
+    <meta charset="UTF-8">
+    <title>{{ item.name }}</title>
+    <script src="path_to_your_nutrition.js"></script> <!-- Update the path accordingly -->
+</head>
+<body>
+   <div id="item_body" class="item-container">
+        <div class="item-description">
+            <h1 onclick="searchItem('{{ item.name }}')" style="cursor:pointer;">{{ item.name }}</h1>
+            <div class="item-image-container">
+                <img id="food_image" class="item-image" src="{{ item.media_link }}" alt="{{ item.name }}">
+            </div>
+            <p>{{ item.description }}</p>
+            <br>
+        </div>
+        <div id = "content_body">
+           <h2> Nutrition</h2>
+            <div class = "nutrition_facts" onclick="searchItem('{{ item.calories }}')" style="cursor:pointer;">
+                <span>Calories:</span> {{ item.calories }}
+            </div>  <br />
+
+            <p> Note that the following values are all in grams.</p>
+            <div class = "nutrition_facts"><span>Fat:</span> {{ item.fat }}</div>
+            <div class = "nutrition_facts"><span>Carbohydrates:</span> {{ item.carbohydrates }}</div>
+            <div class = "nutrition_facts"><span>Protein:</span> {{ item.protein }}</div>
+            <div class = "nutrition_facts"><span>Fiber:</span> {{ item.fiber }}</div>
+            <div class = "nutrition_facts"><span>Sugar:</span> {{ item.sugar }}</div>
+            <div class = "nutrition_facts"><span>Sodium:</span> {{ item.sodium }}</div> <br />
+
+            <span> Basic Ingredients:</span>
+            <ul>
+                {% for data in item.list_data %}
+                    <li onclick="searchItem('{{ data }}')" style="cursor:pointer;">{{ data }}</li>
+                {% endfor %}
+            </ul>
+            
+        </div>
+    </div>
+    
+    <form id = "edit_form" action="/edit/{{ item.id }}" method="get">
+        <button type="submit" class="btn btn-secondary btn-sm">Edit This Entry</button>
+    </form>
+   </div>
+</body>
+{% endblock %}
