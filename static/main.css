@@ -157,24 +157,24 @@ ul{
     position: absolute; /* Position the link absolutely */
     top: 0; /* Align to the top of the parent */
     left: 0; /* Align to the left of the parent */
-    width: 60%; /* Stretch across the entire parent */
-    height: 100%; /* Stretch across the entire parent */
-    display: flex; /* Use flexbox for layout */
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    text-decoration: none; /* Removes underline from links */
-    color: white; /* Set the text color */
+    width: 60%; 
+    height: 100%; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    text-decoration: none; 
+    color: white; 
     font-size: 1em; /* Set the text size */
-    background-color: rgba(23, 23, 23, 0.5); /* Semi-transparent overlay */
-    z-index: 2; /* Ensure it's above the image */
+    background-color: rgba(23, 23, 23, 0.5); 
+    z-index: 2; 
 }
 
 
 /* Image styling */
 .food_list_item .home_images {
     display: block;
-    width: 150px; /* Standardize the width of images */
-    height: auto; /* Keep the aspect ratio of images */
+    width: 150px; 
+    height: auto;
     margin-top: 8px; /* Add some space between the text and the image */
     position: relative;
 }
@@ -191,7 +191,7 @@ ul{
 
 /* CSS to format visited search result links */
 .search-results a:visited {
-    color: gray; /* Maintain white text color for visited links */
+    color: gray; 
 }
 
 .search-results a:hover {
