@@ -1,1 +1,1 @@
-Start up the application by running python server.py in the project's root directory. Be sure to install all the frameworks, libraries, and packages the application needs to run. 
+Start up the application by running python server.py in the project's root directory. The application's server uses Flask to take care of routing. The application uses jQuery to manipulate the DOM appropriately. This application allows users to view, edit, and create data. Be sure to install all the frameworks, libraries, and packages necessary for the application to run. 
